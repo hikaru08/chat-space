@@ -1,13 +1,14 @@
 .side
   .side__header
     .side__header__inner
-      %p.side__header__inner__user-name ユーザーネーム
+      %h2.side__header__inner__user-name
+        = current_user.name
       %ul.side__header__inner__menu
         %li
           =link_to "#", class: "side__header__inner__menu__create-group" do
             = icon 'fas', 'edit'
         %li
-          =link_to "#", class: "side__header__inner__menu__edit-account" do
+          =link_to edit_user_path(current_user), class: "side__header__inner__menu__edit-account" do
             = icon 'fa', 'cog'
   .side__contents
     .side__contents__group
