@@ -1,0 +1,47 @@
+.side{
+  width: 300px;
+  color: #ffffff;
+  float: left;
+  &__header{
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__user-name{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__menu{
+        display: flex;
+        a{
+          color: #ffffff;
+        }
+        li{
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+  &__contents{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    &__group{
+      margin-bottom: 40px;
+      &__name{
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      &__message{
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+  }
+}

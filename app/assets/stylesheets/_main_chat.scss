@@ -1,0 +1,105 @@
+$main-color: #434a54;
+$sub-color: #999999;
+$btn-color: #38aef0;
+
+
+.main{
+  width: calc(100vw - 300px);
+  float: left;
+  &__header{
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
+    &__left{
+      margin-top: 35px;
+      &__name{
+        font-size: 20px;
+        color: #333333;
+      }
+      &__members{
+        display: flex;
+        margin-top: 15px;
+        font-size: 12px;
+        color: $sub-color;
+      }
+    }
+    &__right{
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      color: $btn-color;
+      border: solid 1px $btn-color;
+    }
+  }
+  &__contents{
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
+      &__message{
+        padding-bottom: 40px;
+        &__info{
+          display: flex;
+          margin-bottom: 10px;
+          &__user{
+            color: $main-color;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__date{
+            color: $sub-color;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+        &__text{
+          color: $main-color;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  &__form{
+    padding: 20px 40px;
+    background-color: #ddd;
+    height: 90px;
+    &__box{
+      display: flex;
+      &__input{
+        position: relative;
+        width: 100%;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 25px 0 10px;
+          color: $main-color;
+          border-style: none;
+        }
+        &__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &__file{
+              display: none;
+          }
+        }
+      }
+      &__submit-btn{
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $btn-color;
+        color: #ffffff;
+        cursor: pointer;
+      }  
+    }
+  }    
+}
+
+  

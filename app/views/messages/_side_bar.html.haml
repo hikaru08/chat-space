@@ -1,0 +1,17 @@
+.side
+  .side__header
+    .side__header__inner
+      %p.side__header__inner__user-name ユーザーネーム
+      %ul.side__header__inner__menu
+        %li
+          =link_to "#", class: "side__header__inner__menu__create-group" do
+            = icon 'fas', 'edit'
+        %li
+          =link_to "#", class: "side__header__inner__menu__edit-account" do
+            = icon 'fa', 'cog'
+  .side__contents
+    .side__contents__group
+      %p.side__contents__group__name グループ名
+      %p.side__contents__group__message Hello Chat Space!
+
+      
