@@ -1,0 +1,20 @@
+.side
+  .side__header
+    .side__header__inner
+      .side__header__inner__user-name
+        = current_user.name
+      %ul.side__header__inner__menu
+        %li
+          =link_to new_group_path, class: "side__header__inner__menu__create-group" do
+            = icon 'fas', 'edit'
+        %li
+          =link_to edit_user_path(current_user), class: "side__header__inner__menu__edit-account" do
+            = icon 'fa', 'cog'
+  .side__contents
+    - current_user.groups.each do |group|
+      .side__contents__group
+        = link_to = link_to group_messages_path(group) do
+          .side__contents__group__name
+            = group.name
+          .side__contents__group__message
+            メッセージはまだありません。
