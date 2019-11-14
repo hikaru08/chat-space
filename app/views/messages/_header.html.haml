@@ -1,0 +1,9 @@
+.main__header__left
+  .main__header__left__group-name
+    = @group.name
+  %ul.main__header__left__members
+    %p Mmber:
+    - @group.users.each do |user|
+      = user.name
+=link_to "edit", class: "main__header__right Edit" do
+  Edit

@@ -1,27 +1,14 @@
 .main
   .main__header
-    .main__header__left
-      .main__header__left__group-name グループ
-      %ul.main__header__left__members
-        %p Mmber:
-        %li ゲスト
-    =link_to "#", class: "main__header__right Edit" do
-      Edit
+    = render 'header'
   .main__contents
-    .main__contents__message
-      .main__contents__message__info
-        %p.main__contents__message__info__user ゲスト
-        %p.main__contents__message__info__date YYYY/MM/DD(Mon) 00:00:00
-      %p.main__contents__message__text Hello Chat Space!
+    = render @messages
   .main__form
-    %form.main__form__box
-      .main__form__box__input
-        %input{type:"text", placeholder:"type a message",class:"main__form__box__input__text"}
-        %label.main__form__box__input__image
-          = icon 'fas', 'image'
-          %input{type:"file", class:"main__form__box__input__image__file"}
-      %input{type:"submit", value:"Send",class:"main__form__box__submit-btn"}
-  
-
-
-
+    = form_for [@group, @message] do |f|
+      .main__form__box
+        .main__form__box__input
+          = f.text_field :body, class: 'main__form__box__input__text', placeholder: 'type a message'
+          = f.label :image, class: 'main__form__box__input__image' do
+            = icon 'fas', 'image'
+            = f.file_field :image, class: 'main__form__box__input__image__file'
+        = f.submit 'Send', class: 'main__form__box__submit-btn'  
