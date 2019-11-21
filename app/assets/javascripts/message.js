@@ -59,8 +59,8 @@ $(function(){
         messages.forEach(function (message) {
           insertHTML = buildHTML(message); 
           $('.main__contents').append(insertHTML);
+          $('.main__contents').animate({scrollTop: $('.main__contents')[0].scrollHeight}, 'fast');
         })
-      $('.main__contents').animate({scrollTop: $('.main__contents')[0].scrollHeight}, 'fast');
       })
     .fail(function() {
       console.log('error');
