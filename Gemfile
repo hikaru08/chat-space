@@ -73,6 +73,8 @@ gem 'rails-i18n'
 
 gem 'carrierwave'
 
+gem 'fog-aws'
+
 gem 'mini_magick'
 
 group :production do
